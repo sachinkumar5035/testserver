@@ -12,7 +12,12 @@ app.route("/users").get((req,res)=>{
     })
 })
 
-
+app.route("/newuser").get((req,res)=>{
+    res.status(200).json({
+        success:true,
+        newUsers:[]
+    })
+})
 
 app.listen(process.env.PORT, () => {
     console.log(`server is listing on port : ${process.env.PORT}`);
